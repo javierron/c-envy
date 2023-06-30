@@ -13,7 +13,7 @@ def main():
         with open(data["variant"], 'r') as var:
             var_lines = var.readlines()
                 
-        lines = lines[:data["line"] -1 ] + var_lines + lines[data["line"] + data["size"]:]
+        lines = lines[:data["line"] -1 ] + var_lines + lines[data["line"] + data["size"] - 1:]
 
         with open(data["file"], 'w') as n:
             n.writelines(lines)

@@ -2,7 +2,6 @@
 
 int very_important_function(char data[], int length){
     printf("performing very important operation on data!\n");
-printf(" PWND! ");
     printf("data: %s | length: %d \n", data, length);
     return 0;
 }
