@@ -1,6 +1,9 @@
 {
     "file": "fork.c",
+    "name": "very_important_function",
     "line": 3,
     "size": 5,
-    "variant": "variant.c"
+    "variant": "variant.c",
+    "call_line": 10,
+    "call_size": 1
 }
