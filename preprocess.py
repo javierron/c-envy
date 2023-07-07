@@ -20,11 +20,11 @@ def main():
 
     for i in range(len(var_lines)):
         var_lines[i] = var_lines[i].replace(data['name'], 'variant')
-        
-    l = lines[:data['line'] + data['size']] + var_lines + lines[data['line'] + data['size']:data['call_line'] + data['call_size'] - 1] + [lines[data['call_line'] - 1].replace('original', 'variant')] + lines[data['call_line'] + data['call_size'] - 1:]
 
-    with open(data["file"], 'w') as n:
-    # with open('new.c', 'w') as n:
+    l = lines[:data['line'] + data['size']] + var_lines + lines[data['line'] + data['size']:data['call_line'] + data['call_size'] - 1] + ['\tint x1 = '] + [lines[data['call_line'] - 1].replace('original', 'variant')] + lines[data['call_line'] + data['call_size'] - 1:]
+    
+    # with open(data["file"], 'w') as n:
+    with open('new.c', 'w') as n:
         n.writelines(l)
 
 if __name__ == "__main__":

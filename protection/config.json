@@ -1,0 +1,30 @@
+{
+    "function": {
+        "name": "json_address_get",
+        "definition": {
+            "file": "../test/json.c",
+            "line": 178,
+            "line_end": 186
+        },
+        "call": {
+        "file": "../test/rpc.c",
+            "line": 2624,
+            "call_size": 2
+        }
+    },
+    "variant": {
+        "file" : "../test/variant.c"
+    },
+    "definitions": [
+        {
+            "type": "btc_address_t",
+            "name": "addr"
+        }
+    ],
+    "comparison": {
+        "var1": "addr.hash",
+        "var2": "addr_var.hash",
+        "method": "strcmp",
+        "error": "THROW_TYPE(address, address);"
+    }
+}
