@@ -12,7 +12,7 @@ def change_definition(config):
         variant = f.readlines()
 
 
-    with open('new_def.c', 'w') as n:
+    with open(definition['file'], 'w') as n:
         n.writelines(before + ['\n'])
         n.writelines(variant + ['\n'])
         n.writelines(after)
@@ -45,7 +45,7 @@ def change_call(config):
         print(comparison)
         
 
-    with open('new_call.c', 'w') as n:
+    with open(call_config['file'], 'w') as n:
         n.writelines(before)
         n.writelines(definitions)
         n.write('\n')
